@@ -3,8 +3,8 @@ Employees of the cognizant technology solutions are often required to visit the 
 
 # Module 2 - Travel Planner
 
-1. The travel planner module will allow the employees who have access to the system to raise the request for the travel 
+1. The travel planner module will allow the employees who have access to the system to raise the request for the travel.
 
-2. This module will allow a HR to approve or reject a travel request raised by an employee 
+2. This module will allow a HR to approve or reject a travel request raised by an employee. 
 
-3. An employee can also track the status of their travel request  
+3. An employee can also track the status of their travel request.  

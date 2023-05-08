@@ -1,0 +1,15 @@
+package com.cognizant.employeetraveldesk.travelplanner.services;
+
+import com.cognizant.employeetraveldesk.travelplanner.entities.TravelBudgetAllocations;
+import com.cognizant.employeetraveldesk.travelplanner.payloads.TravelBudgetAllocationsDto;
+
+public interface TravelBudgetAllocationsService {
+
+
+	TravelBudgetAllocations TravelBudgetAllocationsDtoToTravelBudgetAllocations(TravelBudgetAllocationsDto travelBudgetAllocationsDto);
+	
+	TravelBudgetAllocationsDto TravelBudgetAllocationsToTravelBudgetAllocationsDto(TravelBudgetAllocations travelBudgetAllocations);
+
+	TravelBudgetAllocationsDto updateTravelRequests(TravelBudgetAllocationsDto travelBudgetAllocationsDto,Integer RequestId);
+
+}

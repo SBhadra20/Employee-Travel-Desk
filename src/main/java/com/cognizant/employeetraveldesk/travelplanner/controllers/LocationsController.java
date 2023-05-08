@@ -7,19 +7,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.cognizant.employeetraveldesk.travelplanner.entities.Locations;
-import com.cognizant.employeetraveldesk.travelplanner.repositories.LocationsRepo;
+import com.cognizant.employeetraveldesk.travelplanner.payloads.LocationsDto;
+import com.cognizant.employeetraveldesk.travelplanner.services.impl.LocationsServiceImpl;
 
 @RestController
-@RequestMapping("/locations")
+@RequestMapping("/api/travelrequests")
 public class LocationsController {
 	
 	@Autowired
-	private LocationsRepo locationsRepo;
+	private LocationsServiceImpl locationsServiceImpl;
 	
 	// returns all locations
-		@GetMapping("all/")
-		public List<Locations> getLocations() {
-			return locationsRepo.findAll();
-		}
+	@GetMapping("/locations")
+	public List<LocationsDto> getAllLocations() {
+		return locationsServiceImpl.getAllLocations();
+	}
 }

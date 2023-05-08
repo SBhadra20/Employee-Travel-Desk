@@ -8,5 +8,5 @@ public interface TravelRequestsRepo extends JpaRepository<TravelRequests, Intege
 
 //	TravelRequests addTravelRequests(TravelRequests travelRequestsRepo);
 
-	
+	TravelRequests findByRequestId(int RequestId);
 }

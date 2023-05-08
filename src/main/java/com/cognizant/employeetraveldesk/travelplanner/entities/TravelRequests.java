@@ -1,6 +1,6 @@
 package com.cognizant.employeetraveldesk.travelplanner.entities;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 import javax.persistence.*;
 
@@ -17,46 +17,48 @@ public class TravelRequests {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int RequestId;
+	private int requestId;
 
 	@Column(name = "raisedbyemployeeid")
 	private int RaisedByEmployeeId;
 	@Column(name = "tobeapprovedbyhrid")
 	private int ToBeApprovedByHRId;
 	@Column(name = "requestraisedon")
-	private Date RequestRaisedOn;
+	private LocalDate RequestRaisedOn;
 	@Column(name = "fromdate")
-	private Date FromDate;
+	private LocalDate FromDate;
 	@Column(name = "todate")
-	private Date ToDate;
+	private LocalDate ToDate;
 	@Column(name = "purposeoftravel", length = 100)
 	private String PurposeOfTravel;
-
-	@ManyToOne
-	@JoinColumn(name = "locationid")
-	private Locations locations;
-
+//	@Column(name = "locationid")
+//	private int LocationId;
 	@Column(name = "requeststatus", length = 15)
 	private String RequestStatus;
-	private Date RequestApprovedOn;
+	@Column(name = "requestapprovedon")
+	private LocalDate RequestApprovedOn;
 	@Column(name = "priority", length = 6)
 	private String Priority;
 
 	@OneToOne
 	private TravelBudgetAllocations travelBudgetAllocations;
+	
+	@ManyToOne
+	@JoinColumn(name = "locationid")
+	private Locations locations;
 
 	/**
 	 * @return the requestId
 	 */
 	public int getRequestId() {
-		return RequestId;
+		return requestId;
 	}
 
 	/**
 	 * @param requestId the requestId to set
 	 */
 	public void setRequestId(int requestId) {
-		RequestId = requestId;
+		this.requestId = requestId;
 	}
 
 	/**
@@ -90,42 +92,42 @@ public class TravelRequests {
 	/**
 	 * @return the requestRaisedOn
 	 */
-	public Date getRequestRaisedOn() {
+	public LocalDate getRequestRaisedOn() {
 		return RequestRaisedOn;
 	}
 
 	/**
 	 * @param requestRaisedOn the requestRaisedOn to set
 	 */
-	public void setRequestRaisedOn(Date requestRaisedOn) {
+	public void setRequestRaisedOn(LocalDate requestRaisedOn) {
 		RequestRaisedOn = requestRaisedOn;
 	}
 
 	/**
 	 * @return the fromDate
 	 */
-	public Date getFromDate() {
+	public LocalDate getFromDate() {
 		return FromDate;
 	}
 
 	/**
 	 * @param fromDate the fromDate to set
 	 */
-	public void setFromDate(Date fromDate) {
+	public void setFromDate(LocalDate fromDate) {
 		FromDate = fromDate;
 	}
 
 	/**
 	 * @return the toDate
 	 */
-	public Date getToDate() {
+	public LocalDate getToDate() {
 		return ToDate;
 	}
 
 	/**
 	 * @param toDate the toDate to set
 	 */
-	public void setToDate(Date toDate) {
+	public void setToDate(LocalDate toDate) {
 		ToDate = toDate;
 	}
 
@@ -172,14 +174,14 @@ public class TravelRequests {
 	/**
 	 * @return the requestApprovedOn
 	 */
-	public Date getRequestApprovedOn() {
+	public LocalDate getRequestApprovedOn() {
 		return RequestApprovedOn;
 	}
 
 	/**
 	 * @param requestApprovedOn the requestApprovedOn to set
 	 */
-	public void setRequestApprovedOn(Date requestApprovedOn) {
+	public void setRequestApprovedOn(LocalDate requestApprovedOn) {
 		RequestApprovedOn = requestApprovedOn;
 	}
 
@@ -208,6 +210,16 @@ public class TravelRequests {
 	public TravelRequests addTravelRequests(TravelRequests travelRequestsRepo) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	public int getLocationId() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+	public void setLocationId(int locationId) {
+		// TODO Auto-generated method stub
+//		LocationId = locationId;
 	}
 
 }

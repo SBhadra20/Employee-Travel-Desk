@@ -1,22 +1,20 @@
 package com.cognizant.employeetraveldesk.travelplanner.services;
 
-import java.util.List;
-
 import com.cognizant.employeetraveldesk.travelplanner.entities.TravelRequests;
 import com.cognizant.employeetraveldesk.travelplanner.payloads.TravelRequestsDto;
 
 public interface TravelRequestsService {
 
-	TravelRequestsDto createTravelRequests(TravelRequestsDto TravelRequests);
+	TravelRequestsDto addTravelRequests(TravelRequestsDto travelRequestsDto);
 
-	TravelRequestsDto updateTravelRequests(TravelRequestsDto TravelRequests, Integer RequestId);
+	TravelRequestsDto updateTravelRequests(TravelRequestsDto travelRequestsDto, Integer RequestId);
 
-	TravelRequestsDto getTravelRequestsById(Integer RequestId);
-
-	List<TravelRequestsDto> addTravelRequests();
-
-	List<TravelRequestsDto> getAllTravelRequests();
-
-	void deleteTravelRequests(Integer RequestId);
+	TravelRequestsDto getTravelRequestsByRequestId(Integer RequestId);
+	
+	TravelRequestsDto getTravelRequestsByHRId(Integer HRid);
+	
+	TravelRequests TravelRequestsDtoToTravelRequests(TravelRequestsDto travelRequestsDto);
+	
+	TravelRequestsDto TravelRequestsToTravelRequestsDto(TravelRequests travelRequests);
 
 }

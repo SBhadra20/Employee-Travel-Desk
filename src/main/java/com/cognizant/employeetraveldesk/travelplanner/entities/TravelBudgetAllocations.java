@@ -98,4 +98,14 @@ public class TravelBudgetAllocations {
 		// TODO Auto-generated constructor stub
 	}
 
+	public void setTravelRequestId(int travelRequestId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public int getTravelRequestId() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

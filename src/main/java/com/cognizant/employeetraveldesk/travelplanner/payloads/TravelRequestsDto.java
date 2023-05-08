@@ -1,6 +1,6 @@
 package com.cognizant.employeetraveldesk.travelplanner.payloads;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,14 +15,15 @@ public class TravelRequestsDto {
 	private int RequestId;
 	private int RaisedByEmployeeId;
 	private int ToBeApprovedByHRId;
-	private Date RequestRaisedOn;
-	private Date FromDate;
-	private Date ToDate;
+	private LocalDate RequestRaisedOn;
+	private LocalDate FromDate;
+	private LocalDate ToDate;
     private String PurposeOfTravel;
 	private int LocationId; 
 	private String RequestStatus;
-	private Date RequestApprovedOn;
+	private LocalDate RequestApprovedOn;
 	private String Priority;
+	
 	public int getRequestId() {
 		return RequestId;
 	}
@@ -41,22 +42,22 @@ public class TravelRequestsDto {
 	public void setToBeApprovedByHRId(int toBeApprovedByHRId) {
 		ToBeApprovedByHRId = toBeApprovedByHRId;
 	}
-	public Date getRequestRaisedOn() {
+	public LocalDate getRequestRaisedOn() {
 		return RequestRaisedOn;
 	}
-	public void setRequestRaisedOn(Date requestRaisedOn) {
+	public void setRequestRaisedOn(LocalDate requestRaisedOn) {
 		RequestRaisedOn = requestRaisedOn;
 	}
-	public Date getFromDate() {
+	public LocalDate getFromDate() {
 		return FromDate;
 	}
-	public void setFromDate(Date fromDate) {
+	public void setFromDate(LocalDate fromDate) {
 		FromDate = fromDate;
 	}
-	public Date getToDate() {
+	public LocalDate getToDate() {
 		return ToDate;
 	}
-	public void setToDate(Date toDate) {
+	public void setToDate(LocalDate toDate) {
 		ToDate = toDate;
 	}
 	public String getPurposeOfTravel() {
@@ -77,10 +78,10 @@ public class TravelRequestsDto {
 	public void setRequestStatus(String requestStatus) {
 		RequestStatus = requestStatus;
 	}
-	public Date getRequestApprovedOn() {
+	public LocalDate getRequestApprovedOn() {
 		return RequestApprovedOn;
 	}
-	public void setRequestApprovedOn(Date requestApprovedOn) {
+	public void setRequestApprovedOn(LocalDate requestApprovedOn) {
 		RequestApprovedOn = requestApprovedOn;
 	}
 	public String getPriority() {

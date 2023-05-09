@@ -1,7 +1,7 @@
 # Employee-Travel-Desk
 Employees of the cognizant technology solutions are often required to visit the various client locations for the business purposes. The Employee Travel Desk Portal will now provided an automated workflow for planning the travel of employees with due approvals from their HR. The portal further will provide the facilities for doing reservations tickets and reimbursements of expenses incurred during the stay. 
 
-# Module 2 - Travel Planner
+## Module 2 - Travel Planner
 
 1. The travel planner module will allow the employees who have access to the system to raise the request for the travel.
 
